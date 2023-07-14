@@ -1,16 +1,30 @@
 # Who-wants-to-be-a-millionaire-
 # This is the replica of the famous TV reality show "Who wants to be a millionaire ?"
 print('Welcome to " Who wants to be a millionarire ? "\n')
-print("The rules are simple : You will be asked 5 questions\nand each question is progressively increasing in amount starting from $1000 to $1000000")
+print("The rules are simple : You will be asked 5 questions and each question is progressively increasing $1000 \n\n")
 Questions = ["Who is the prime minister of Canada in 2023?", "Which fruit is known as king of fruits", "Who is known as God of Cricket", "What is the height of Mount Everest", "What is real name of Punjabi Singer 'Sidhu Moosewala'"]
 Answers = ["Justin Trudeau", "Mango", "Sachin Tendulkar", "8848 meters", "Shubhdeep Singh Sidhu" ]
-QuesAns1 = ["Justin Trudeau", "Joe Biden", "Dwayne Johnson", "Jagmeet Singh"]
-QuesAns2 = ["Apple", "DragonFruit", "Mango", "Cherry"]
-QuesAns3 = ["MS Dhoni", "Brian Lara", "Wasim Akram", "Sachin Tendulkar"]
-QuesAns4 = ["1234 meters", "8848 meters", "5421 meters", "10,013 meters"]
-QuesAns5 = ["Diljit Dosanjh", "Sunny Maton", "Shubhneet Singh Sidhu", "Shubhdeep Singh Sidhu"]
+QuesAns = ['Question 1 = ["Justin Trudeau", "Joe Biden", "Dwayne Johnson", "Jagmeet Singh"]', 'Question 2 = ["Apple", "DragonFruit", "Mango", "Cherry"]', 'Question 3= ["MS Dhoni", "Brian Lara", "Wasim Akram", "Sachin Tendulkar"]', 'Question 4 = ["1234 meters", "8848 meters", "5421 meters", "10,013 meters"]', 'Question 5 = ["Diljit Dosanjh", "Sunny Maton", "Shubhneet Singh Sidhu", "Shubhdeep Singh Sidhu"]']
 answer = True
+Sum = 0
 i = int(0)
 while (answer != False):
-  print(Questions[i])
-  input("What is the answer ?", QuesAns[i])
+  print("Question", i+1, ": ", Questions[i],"\n")
+  print("The options for ", QuesAns[i], "\n")
+  answer = input("What is the answer?\n\n")
+  if (answer == Answers[i]):
+    answer == True
+    Sum = Sum+20000
+    print ("You are at : $ ", Sum, "\n")
+    if ( i == 4):
+        answer == True
+        Sum = Sum+1000
+        print ("You are at : $ ", Sum, "\n")
+        print("Congratulations you are a millionaire")
+        break
+  else:
+    answer == False
+    print("Sorry, You lost with $: ", Sum)
+    break
+  i = i+1
+  
